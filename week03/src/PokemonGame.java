@@ -3,23 +3,22 @@ public class PokemonGame {
         Pokemon squirtle = new Pokemon("꼬부기", 1);
         Pokemon pikachu = new Pokemon("피카츄");
         Pokemon charizard = new Pokemon();
-
         System.out.println(pikachu.getName()
                 + "의 체력은 " + pikachu.getHp()
                 + "이고 레벨은 " + pikachu.getLevel()
                 + "입니다");
-
         squirtle.evolve(squirtle);
         System.out.println(squirtle.getName());
         squirtle.evolve(squirtle);
-
 //        pikachu.name = "피카츄";
 //        charizard.name = "리자몽";
 
         charizard.setName("리자몽");
 
-        pikachu.setLevel(23);
-        pikachu.setHp(100);
+//        pikachu.setLevel(23);
+//        pikachu.setHp(500);
+        pikachu.setLevel(23).setHp(500);  // method chaining.
+
 
         charizard.setLevel(36);
         //charizard.setHp(800);
@@ -31,5 +30,10 @@ public class PokemonGame {
         pikachu.setName("라이츄");
         System.out.println(pikachu.getName());
         pikachu.evolve(pikachu);
+
+        System.out.println(pikachu.getName()
+                + "의 체력은 " + pikachu.getHp()
+                + "이고 레벨은 " + pikachu.getLevel()
+                + "입니다");
     }
 }

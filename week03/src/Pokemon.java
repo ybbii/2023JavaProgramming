@@ -10,7 +10,6 @@ public class Pokemon {
         System.out.println("포켓몬 객체 생성(기본 생성자)!");
         this.hp = 100;
     }
-
     // constructor overloading
     // 생성자 오버로딩
     Pokemon(String name){
@@ -20,34 +19,42 @@ public class Pokemon {
 //        this.level = 1;
 //        this.hp = 100;
     }
-
-        Pokemon(String name, int level) {
-            System.out.println("포켓몬 객체 생성(매개변수 2개 생성자)!");
-            this.name = name;
-            this.level = level;
-            this.hp = 100;
-        }
-
-        // alt+insert
-        public String getName() {
-            return name;
-        }
-        // 실행된다. 하지만 매개변수 n은 여러 의미를 가질 수 있으므로
-        // n보다는 명확한 의미의 name을 사용해야 한다
+    Pokemon(String name, int level) {
+        System.out.println("포켓몬 객체 생성(매개변수 2개 생성자)!");
+        this.name = name;
+        this.level = level;
+        this.hp = 100;
+    }
+    // alt+insert
+    public String getName() {
+        return name;
+    }
+    // 실행된다. 하지만 매개변수 n은 여러 의미를 가질 수 있으므로
+    // n보다는 명확한 의미의 name을 사용해야 한다
 //    public void setName(String n) {
 //        this.name = n;
 //    }
-        public void setName(String name) {
-            //name = name;
-            // this는 실행시점의 객체 메모리 번지 주소를 의미한다.
-            this.name = name;   // this 키워드를 사용하므로써 매개변수와 멤버변수(필드)를 구분할 수 있다.
-        }
-        public int getLevel() {
-            return level;
-        }
-        public void setLevel(int level) {
+    public void setName(String name) {
+        //name = name;
+        // this는 실행시점의 객체 메모리 번지 주소를 의미한다.
+        this.name = name;   // this 키워드를 사용하므로써 매개변수와 멤버변수(필드)를 구분할 수 있다.
+    }
+    public int getLevel() {
+        return level;
+    }
+
+
+//    public void setLevel(int level) {
+//        this.level = level;
+//    }
+
+        public Pokemon setLevel(int level) {
+            // 리턴타입 void -> Pokemon
             this.level = level;
+            return this;  // 실행 시점의 포켓몬 객체를 리턴
         }
+
+
         public int getHp() {
             return hp;
         }
