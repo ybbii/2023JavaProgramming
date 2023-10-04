@@ -1,8 +1,13 @@
 public class PokemonGame {
     public static void main(String[] args) {
+        System.out.println(Pokemon.getPokemonCount());
         Pokemon squirtle = new Pokemon("꼬부기", 1);
         Pokemon pikachu = new Pokemon("피카츄");
+        System.out.println(Pokemon.getPokemonCount());
         Pokemon charizard = new Pokemon();
+        //System.out.println(Pokemon.pokemonCount);
+        System.out.println(Pokemon.getPokemonCount());
+
         System.out.println(pikachu.getName()
                 + "의 체력은 " + pikachu.getHp()
                 + "이고 레벨은 " + pikachu.getLevel()
@@ -28,7 +33,6 @@ public class PokemonGame {
                 + "의 체력은 " + pikachu.getHp()
                 + "이고 레벨은 " + pikachu.getLevel()
                 + "입니다");
-
         charizard.attack(squirtle);
         squirtle.attack();
     }
