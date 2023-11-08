@@ -4,6 +4,7 @@ import fly.Wings;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
 public class PokemonGame {
@@ -56,12 +57,10 @@ public class PokemonGame {
                     System.out.println("현재 지역을 탈출합니다~~~");
                     produceEnemy();
                 }else if(menu == 3){
-
-
                     System.out.println("힐링 포션을 마십니다. 30hp 증가합니다");
-                    UnaryOperator<Integer> healPotion = hp -> hp + 30;
-                    int newHp = healPotion.apply(player.getHp());
-                    player.setHp(newHp);
+                    Function<Integer, Integer> healPortion = hp -> hp + 30;
+//                    int newHp = healPortion.apply(player.getHp());
+                    player.setHp(healPortion.apply(player.getHp()));
                     System.out.println(player.name + "의 체력은 " + player.getHp() + "입니다!");
                 }else if(menu == 4){
                     System.out.println("게임을 종료합니다.");
